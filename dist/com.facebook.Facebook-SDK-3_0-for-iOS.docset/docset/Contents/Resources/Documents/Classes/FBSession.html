@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">Facebook SDK 3.0 for iOS </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">Facebook SDK 3.1 for iOS </a></h1>
 				<a id="developerHome" href="../index.html">Facebook</a>
 			</div>
 			
@@ -48,6 +48,8 @@
 	
 	<option value="//api/name/isOpen">&nbsp;&nbsp;&nbsp;&nbsp;isOpen</option>
 	
+	<option value="//api/name/loginType">&nbsp;&nbsp;&nbsp;&nbsp;loginType</option>
+	
 	<option value="//api/name/permissions">&nbsp;&nbsp;&nbsp;&nbsp;permissions</option>
 	
 	<option value="//api/name/state">&nbsp;&nbsp;&nbsp;&nbsp;state</option>
@@ -67,6 +69,10 @@
 	
 	<option value="//api/name/openActiveSessionWithPermissions:allowLoginUI:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;+ openActiveSessionWithPermissions:allowLoginUI:completionHandler:</option>
 	
+	<option value="//api/name/openActiveSessionWithPublishPermissions:defaultAudience:allowLoginUI:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;+ openActiveSessionWithPublishPermissions:defaultAudience:allowLoginUI:completionHandler:</option>
+	
+	<option value="//api/name/openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;+ openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:</option>
+	
 	<option value="//api/name/setActiveSession:">&nbsp;&nbsp;&nbsp;&nbsp;+ setActiveSession:</option>
 	
 	<option value="//api/name/setDefaultAppID:">&nbsp;&nbsp;&nbsp;&nbsp;+ setDefaultAppID:</option>
@@ -80,9 +86,13 @@
 	
 	<option value="//api/name/closeAndClearTokenInformation">&nbsp;&nbsp;&nbsp;&nbsp;- closeAndClearTokenInformation</option>
 	
+	<option value="//api/name/handleDidBecomeActive">&nbsp;&nbsp;&nbsp;&nbsp;- handleDidBecomeActive</option>
+	
 	<option value="//api/name/handleOpenURL:">&nbsp;&nbsp;&nbsp;&nbsp;- handleOpenURL:</option>
 	
 	<option value="//api/name/init">&nbsp;&nbsp;&nbsp;&nbsp;- init</option>
+	
+	<option value="//api/name/initWithAppID:permissions:defaultAudience:urlSchemeSuffix:tokenCacheStrategy:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithAppID:permissions:defaultAudience:urlSchemeSuffix:tokenCacheStrategy:</option>
 	
 	<option value="//api/name/initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:</option>
 	
@@ -93,6 +103,10 @@
 	<option value="//api/name/openWithCompletionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- openWithCompletionHandler:</option>
 	
 	<option value="//api/name/reauthorizeWithPermissions:behavior:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- reauthorizeWithPermissions:behavior:completionHandler:</option>
+	
+	<option value="//api/name/reauthorizeWithPublishPermissions:defaultAudience:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- reauthorizeWithPublishPermissions:defaultAudience:completionHandler:</option>
+	
+	<option value="//api/name/reauthorizeWithReadPermissions:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- reauthorizeWithReadPermissions:completionHandler:</option>
 	
 	
 	
@@ -126,6 +140,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isOpen">isOpen</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loginType">loginType</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/permissions">permissions</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/state">state</a></span></li>
@@ -146,6 +162,10 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openActiveSessionWithPermissions:allowLoginUI:completionHandler:">openActiveSessionWithPermissions:allowLoginUI:completionHandler:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openActiveSessionWithPublishPermissions:defaultAudience:allowLoginUI:completionHandler:">openActiveSessionWithPublishPermissions:defaultAudience:allowLoginUI:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:">openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setActiveSession:">setActiveSession:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDefaultAppID:">setDefaultAppID:</a></span></li>
@@ -160,9 +180,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/closeAndClearTokenInformation">closeAndClearTokenInformation</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/handleDidBecomeActive">handleDidBecomeActive</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/handleOpenURL:">handleOpenURL:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/init">init</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithAppID:permissions:defaultAudience:urlSchemeSuffix:tokenCacheStrategy:">initWithAppID:permissions:defaultAudience:urlSchemeSuffix:tokenCacheStrategy:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:">initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:</a></span></li>
 	
@@ -173,6 +197,10 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openWithCompletionHandler:">openWithCompletionHandler:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reauthorizeWithPermissions:behavior:completionHandler:">reauthorizeWithPermissions:behavior:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reauthorizeWithPublishPermissions:defaultAudience:completionHandler:">reauthorizeWithPublishPermissions:defaultAudience:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reauthorizeWithReadPermissions:completionHandler:">reauthorizeWithReadPermissions:completionHandler:</a></span></li>
 	
 </ul></li>
 
@@ -268,6 +296,14 @@ defaults when ommitted.</p></span>
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/initWithAppID:permissions:defaultAudience:urlSchemeSuffix:tokenCacheStrategy:">&ndash;&nbsp;initWithAppID:permissions:defaultAudience:urlSchemeSuffix:tokenCacheStrategy:</a></code>
+		<span class="tooltip"><p>Following are the descriptions of the arguments along with their
+defaults when ommitted.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/isOpen">&nbsp;&nbsp;isOpen</a></code>
 		<span class="tooltip"><p>Indicates whether the session is open and ready for use.</p></span>
 	</span>
@@ -317,6 +353,13 @@ defaults when ommitted.</p></span>
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/loginType">&nbsp;&nbsp;loginType</a></code>
+		<span class="tooltip"><p>Specifies the login type used to authenticate the user.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/openWithCompletionHandler:">&ndash;&nbsp;openWithCompletionHandler:</a></code>
 		<span class="tooltip"><p>Opens a session for the Facebook.</p></span>
 	</span>
@@ -352,10 +395,33 @@ defaults when ommitted.</p></span>
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/reauthorizeWithReadPermissions:completionHandler:">&ndash;&nbsp;reauthorizeWithReadPermissions:completionHandler:</a></code>
+		<span class="tooltip"><p>Reauthorizes the session, with additional permissions.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/reauthorizeWithPublishPermissions:defaultAudience:completionHandler:">&ndash;&nbsp;reauthorizeWithPublishPermissions:defaultAudience:completionHandler:</a></code>
+		<span class="tooltip"><p>Reauthorizes the session, with additional permissions.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/handleOpenURL:">&ndash;&nbsp;handleOpenURL:</a></code>
 		<span class="tooltip"><p>A helper method that is used to provide an implementation for
 [UIApplicationDelegate application:openURL:sourceApplication:annotation:]. It should be invoked during
 the Facebook Login flow and will update the session information based on the incoming URL.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/handleDidBecomeActive">&ndash;&nbsp;handleDidBecomeActive</a></code>
+		<span class="tooltip"><p>A helper method that is used to provide an implementation for
+[UIApplicationDelegate applicationDidBecomeActive:] to properly resolve session state for
+the Facebook Login flow, specifically to support app-switch login.</p></span>
 	</span>
 	
 	
@@ -371,6 +437,24 @@ used by the application. This session becomes the active session, whether open s
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/openActiveSessionWithPermissions:allowLoginUI:completionHandler:">+&nbsp;openActiveSessionWithPermissions:allowLoginUI:completionHandler:</a></code>
+		<span class="tooltip"><p>This is a simple method for opening a session with Facebook. Using sessionOpen logs on a user,
+and sets the static activeSession which becomes the default session object for any Facebook UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:">+&nbsp;openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:</a></code>
+		<span class="tooltip"><p>This is a simple method for opening a session with Facebook. Using sessionOpen logs on a user,
+and sets the static activeSession which becomes the default session object for any Facebook UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/openActiveSessionWithPublishPermissions:defaultAudience:allowLoginUI:completionHandler:">+&nbsp;openActiveSessionWithPublishPermissions:defaultAudience:allowLoginUI:completionHandler:</a></code>
 		<span class="tooltip"><p>This is a simple method for opening a session with Facebook. Using sessionOpen logs on a user,
 and sets the static activeSession which becomes the default session object for any Facebook UI widgets
 used by the application. This session becomes the active session, whether open succeeds or fails.</p></span>
@@ -571,6 +655,47 @@ overridden on a per session basis.</p></span>
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Indicates whether the session is open and ready for use.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loginType" title="loginType"></a>
+	<h3 class="subsubtitle method-title">loginType</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Specifies the login type used to authenticate the user.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly) FBSessionLoginType loginType</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Specifies the login type used to authenticate the user.</p>
 	</div>
 	
 	
@@ -904,8 +1029,180 @@ used by the application. This session becomes the active session, whether open s
 		<dl class="argument-def parameter-def">
 			<dt><em>permissions</em></dt>
 			<dd><p>An array of strings representing the permissions to request during the
-authentication flow. A value of nil will indicates basic permissions. A nil value specifies
+authentication flow. A value of nil indicates basic permissions. A nil value specifies
 default permissions.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>allowLoginUI</em></dt>
+			<dd><p>Sometimes it is useful to attempt to open a session, but only if
+no login UI will be required to accomplish the operation. For example, at application startup it may not
+be desirable to transition to login UI for the user, and yet an open session is desired so long as a cached
+token can be used to open the session. Passing NO to this argument, assures the method will not present UI
+to the user in order to open the session.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>Many applications will benefit from notification when a session becomes invalid
+or undergoes other state transitions. If a block is provided, the FBSession
+object will call the block each time the session changes state.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This is a simple method for opening a session with Facebook. Using sessionOpen logs on a user,
+and sets the static activeSession which becomes the default session object for any Facebook UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</p>
+
+<p>Returns true if the session was opened synchronously without presenting UI to the user. This occurs
+when there is a cached token available from a previous run of the application. If NO is returned, this indicates
+that the session was not immediately opened, via cache. However, if YES was passed as allowLoginUI, then it is
+possible that the user will login, and the session will become open asynchronously. The primary use for
+this return value is to switch-on facebook capabilities in your UX upon startup, in the case were the session
+is opened via cache.</p>
+
+<p>It is required that initial permissions requests represent read-only permissions only. If publish
+permissions are needed, you may use reauthorizeWithPermissions to specify additional permissions as
+well as an audience. Use of this method will result in a legacy fast-app-switch Facebook Login due to
+the requirement to seperate read and publish permissions for newer applications. Methods and properties
+that specify permissions without a read or publish qualification are deprecated; use of a read-qualified
+or publish-qualified alternative is preferred.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/openActiveSessionWithPublishPermissions:defaultAudience:allowLoginUI:completionHandler:" title="openActiveSessionWithPublishPermissions:defaultAudience:allowLoginUI:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">openActiveSessionWithPublishPermissions:defaultAudience:allowLoginUI:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This is a simple method for opening a session with Facebook. Using sessionOpen logs on a user,
+and sets the static activeSession which becomes the default session object for any Facebook UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BOOL)openActiveSessionWithPublishPermissions:(NSArray *)<em>publishPermissions</em> defaultAudience:(FBSessionDefaultAudience)<em>defaultAudience</em> allowLoginUI:(BOOL)<em>allowLoginUI</em> completionHandler:(FBSessionStateHandler)<em>handler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>publishPermissions</em></dt>
+			<dd><p>An array of strings representing the publish permissions to request during the
+authentication flow.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>defaultAudience</em></dt>
+			<dd><p>Anytime an app publishes on behalf of a user, the post must have an audience (e.g. me, my friends, etc.)
+The default audience is used to notify the user of the cieling that the user agrees to grant to the app for the provided permissions.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>allowLoginUI</em></dt>
+			<dd><p>Sometimes it is useful to attempt to open a session, but only if
+no login UI will be required to accomplish the operation. For example, at application startup it may not
+be desirable to transition to login UI for the user, and yet an open session is desired so long as a cached
+token can be used to open the session. Passing NO to this argument, assures the method will not present UI
+to the user in order to open the session.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>Many applications will benefit from notification when a session becomes invalid
+or undergoes other state transitions. If a block is provided, the FBSession
+object will call the block each time the session changes state.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This is a simple method for opening a session with Facebook. Using sessionOpen logs on a user,
+and sets the static activeSession which becomes the default session object for any Facebook UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</p>
+
+<p>Returns true if the session was opened synchronously without presenting UI to the user. This occurs
+when there is a cached token available from a previous run of the application. If NO is returned, this indicates
+that the session was not immediately opened, via cache. However, if YES was passed as allowLoginUI, then it is
+possible that the user will login, and the session will become open asynchronously. The primary use for
+this return value is to switch-on facebook capabilities in your UX upon startup, in the case were the session
+is opened via cache.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:" title="openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This is a simple method for opening a session with Facebook. Using sessionOpen logs on a user,
+and sets the static activeSession which becomes the default session object for any Facebook UI widgets
+used by the application. This session becomes the active session, whether open succeeds or fails.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BOOL)openActiveSessionWithReadPermissions:(NSArray *)<em>readPermissions</em> allowLoginUI:(BOOL)<em>allowLoginUI</em> completionHandler:(FBSessionStateHandler)<em>handler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>readPermissions</em></dt>
+			<dd><p>An array of strings representing the read permissions to request during the
+authentication flow. A value of nil indicates basic permissions. It is not allowed to pass publish
+permissions to this method.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -1160,6 +1457,51 @@ overridden on a per session basis.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/handleDidBecomeActive" title="handleDidBecomeActive"></a>
+	<h3 class="subsubtitle method-title">handleDidBecomeActive</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A helper method that is used to provide an implementation for
+[UIApplicationDelegate applicationDidBecomeActive:] to properly resolve session state for
+the Facebook Login flow, specifically to support app-switch login.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)handleDidBecomeActive</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A helper method that is used to provide an implementation for
+[UIApplicationDelegate applicationDidBecomeActive:] to properly resolve session state for
+the Facebook Login flow, specifically to support app-switch login.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/handleOpenURL:" title="handleOpenURL:"></a>
 	<h3 class="subsubtitle method-title">handleOpenURL:</h3>
 	
@@ -1258,6 +1600,85 @@ to <a href="#//api/name/initWithAppID:permissions:urlSchemeSuffix:tokenCacheStra
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/initWithAppID:permissions:defaultAudience:urlSchemeSuffix:tokenCacheStrategy:" title="initWithAppID:permissions:defaultAudience:urlSchemeSuffix:tokenCacheStrategy:"></a>
+	<h3 class="subsubtitle method-title">initWithAppID:permissions:defaultAudience:urlSchemeSuffix:tokenCacheStrategy:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Following are the descriptions of the arguments along with their
+defaults when ommitted.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithAppID:(NSString *)<em>appID</em> permissions:(NSArray *)<em>permissions</em> defaultAudience:(FBSessionDefaultAudience)<em>defaultAudience</em> urlSchemeSuffix:(NSString *)<em>urlSchemeSuffix</em> tokenCacheStrategy:(FBSessionTokenCachingStrategy *)<em>tokenCachingStrategy</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>appID</em></dt>
+			<dd><p>The Facebook App ID for the session. If nil is passed in the default App ID will be obtained from a call to <a href="#//api/name/defaultAppID">[FBSession defaultAppID]</a>. The default is nil.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>permissions</em></dt>
+			<dd><p>An array of strings representing the permissions to request during the
+authentication flow. A value of nil indicates basic permissions. The default is nil.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>defaultAudience</em></dt>
+			<dd><p>Most applications use FBSessionDefaultAudienceNone here, only specifying an audience when using reauthorize to request publish permissions.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>urlSchemeSuffix</em></dt>
+			<dd><p>The URL Scheme Suffix to be used in scenarious where multiple iOS apps use one Facebook App ID. A value of nil indicates that this information should be pulled from the plist. The default is nil.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tokenCachingStrategy</em></dt>
+			<dd><p>Specifies a key name to use for cached token information in NSUserDefaults, nil
+indicates a default value of @&ldquo;FBAccessTokenInformationKey&rdquo;.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Following are the descriptions of the arguments along with their
+defaults when ommitted.</p>
+
+<p>It is required that any single permission request request (including initial log in) represent read-only permissions
+or publish permissions only; not both. The permissions passed here should reflect this requirement. If publish permissions
+are used, then the audience must also be specified.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:" title="initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:"></a>
 	<h3 class="subsubtitle method-title">initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:</h3>
 	
@@ -1285,7 +1706,7 @@ defaults when ommitted.</p>
 		<dl class="argument-def parameter-def">
 			<dt><em>permissions</em></dt>
 			<dd><p>An array of strings representing the permissions to request during the
-authentication flow. A value of nil will indicates basic permissions. The default is nil.</p></dd>
+authentication flow. A value of nil indicates basic permissions. The default is nil.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -1311,6 +1732,9 @@ indicates a default value of @&ldquo;FBAccessTokenInformationKey&rdquo;.</p></dd
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Following are the descriptions of the arguments along with their
 defaults when ommitted.</p>
+
+<p>It is required that any single permission request request (including initial log in) represent read-only permissions
+or publish permissions only; not both. The permissions passed here should reflect this requirement.</p>
 	</div>
 	
 	
@@ -1350,7 +1774,7 @@ default values for parameters to <a href="#//api/name/initWithAppID:permissions:
 		<dl class="argument-def parameter-def">
 			<dt><em>permissions</em></dt>
 			<dd><p>An array of strings representing the permissions to request during the
-authentication flow. A value of nil will indicates basic permissions. The default is nil.</p></dd>
+authentication flow. A value of nil indicates basic permissions. The default is nil.</p></dd>
 		</dl>
 		
 	</div>
@@ -1365,6 +1789,9 @@ authentication flow. A value of nil will indicates basic permissions. The defaul
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Returns a newly initialized Facebook session with the specified permissions and other
 default values for parameters to <a href="#//api/name/initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:">initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:</a>.</p>
+
+<p>It is required that any single permission request request (including initial log in) represent read-only permissions
+or publish permissions only; not both. The permissions passed here should reflect this requirement.</p>
 	</div>
 	
 	
@@ -1533,13 +1960,136 @@ state changes. The block will be released when the session is closed.</p>
 		<dl class="argument-def parameter-def">
 			<dt><em>permissions</em></dt>
 			<dd><p>An array of strings representing the permissions to request during the
-authentication flow. A value of nil will indicates basic permissions. The default is nil.</p></dd>
+authentication flow. A value of nil indicates basic permissions. The default is nil.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>behavior</em></dt>
 			<dd><p>Controls whether to allow, force, or prohibit Facebook Login. The default
 is to allow Facebook Login and fall back to Inline Facebook Login if needed.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>A block to call with session state changes. The default is nil.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Reauthorizes the session, with additional permissions.</p>
+
+<p>Methods and properties that specify permissions without a read or publish
+qualification are deprecated; use of a read-qualified or publish-qualified alternative is preferred
+(e.g. reauthorizeWithReadPermissions or reauthorizeWithPublishPermissions)</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/reauthorizeWithPublishPermissions:defaultAudience:completionHandler:" title="reauthorizeWithPublishPermissions:defaultAudience:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">reauthorizeWithPublishPermissions:defaultAudience:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reauthorizes the session, with additional permissions.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)reauthorizeWithPublishPermissions:(NSArray *)<em>writePermissions</em> defaultAudience:(FBSessionDefaultAudience)<em>defaultAudience</em> completionHandler:(FBSessionReauthorizeResultHandler)<em>handler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>writePermissions</em></dt>
+			<dd><p>An array of strings representing the permissions to request during the
+authentication flow.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>defaultAudience</em></dt>
+			<dd><p>Specifies the audience for posts.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>A block to call with session state changes. The default is nil.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Reauthorizes the session, with additional permissions.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/reauthorizeWithReadPermissions:completionHandler:" title="reauthorizeWithReadPermissions:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">reauthorizeWithReadPermissions:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reauthorizes the session, with additional permissions.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)reauthorizeWithReadPermissions:(NSArray *)<em>readPermissions</em> completionHandler:(FBSessionReauthorizeResultHandler)<em>handler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>readPermissions</em></dt>
+			<dd><p>An array of strings representing the permissions to request during the
+authentication flow. A value of nil indicates basic permissions.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -1587,7 +2137,7 @@ is to allow Facebook Login and fall back to Inline Facebook Login if needed.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Facebook. All rights reserved. (Last updated: 2012-09-25)</span><br />
+						<p><span class="copyright">&copy; 2012 Facebook. All rights reserved. (Last updated: 2012-10-02)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						
