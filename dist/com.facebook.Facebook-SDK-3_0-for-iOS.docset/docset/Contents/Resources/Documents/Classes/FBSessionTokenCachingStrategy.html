@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">Facebook SDK 3.1 for iOS </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">Facebook SDK 3.2 for iOS </a></h1>
 				<a id="developerHome" href="../index.html">Facebook</a>
 			</div>
 			
@@ -46,14 +46,20 @@
 	
 	<option value="//api/name/isValidTokenInformation:">&nbsp;&nbsp;&nbsp;&nbsp;+ isValidTokenInformation:</option>
 	
+	<option value="//api/name/nullCacheInstance">&nbsp;&nbsp;&nbsp;&nbsp;+ nullCacheInstance</option>
+	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
+	<option value="//api/name/cacheFBAccessTokenData:">&nbsp;&nbsp;&nbsp;&nbsp;- cacheFBAccessTokenData:</option>
+	
 	<option value="//api/name/cacheTokenInformation:">&nbsp;&nbsp;&nbsp;&nbsp;- cacheTokenInformation:</option>
 	
 	<option value="//api/name/clearToken">&nbsp;&nbsp;&nbsp;&nbsp;- clearToken</option>
+	
+	<option value="//api/name/fetchFBAccessTokenData">&nbsp;&nbsp;&nbsp;&nbsp;- fetchFBAccessTokenData</option>
 	
 	<option value="//api/name/fetchTokenInformation">&nbsp;&nbsp;&nbsp;&nbsp;- fetchTokenInformation</option>
 	
@@ -91,15 +97,21 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isValidTokenInformation:">isValidTokenInformation:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nullCacheInstance">nullCacheInstance</a></span></li>
+	
 </ul></li>
 
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cacheFBAccessTokenData:">cacheFBAccessTokenData:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cacheTokenInformation:">cacheTokenInformation:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clearToken">clearToken</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchFBAccessTokenData">fetchFBAccessTokenData</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchTokenInformation">fetchTokenInformation</a></span></li>
 	
@@ -160,7 +172,8 @@ for multiple users.</p>
 be responsible for caching behavior of your application. This approach is useful if you need to change where the
 information is cached, for example if you prefer to use the filesystem or make a network connection to fetch and
 persist cached tokens.  Inheritors should override the cacheTokenInformation, fetchTokenInformation, and clearToken methods.
-Doing this enables your application to implement any token caching scheme, including no caching at all.</p>
+Doing this enables your application to implement any token caching scheme, including no caching at all (see
+<code>[FBSessionTokenCachingStrategy* nullCacheInstance ]</code>.</p>
 
 <p>Direct use of <code>FBSessionTokenCachingStrategy</code>is an advanced technique. Most applications use <a href="../Classes/FBSession.html">FBSession</a> objects without
 passing an <code>FBSessionTokenCachingStrategy</code>, which yields default caching to <code>NSUserDefaults</code>.</p>
@@ -202,8 +215,22 @@ passing an <code>FBSessionTokenCachingStrategy</code>, which yields default cach
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/cacheFBAccessTokenData:">&ndash;&nbsp;cacheFBAccessTokenData:</a></code>
+		<span class="tooltip"><p>Cache the supplied token.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/fetchTokenInformation">&ndash;&nbsp;fetchTokenInformation</a></code>
 		<span class="tooltip"><p>Called by <a href="../Classes/FBSession.html">FBSession</a> (and overridden by inheritors), in order to fetch cached token information</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fetchFBAccessTokenData">&ndash;&nbsp;fetchFBAccessTokenData</a></code>
+		<span class="tooltip"><p>Fetches the cached token instance.</p></span>
 	</span>
 	
 	
@@ -218,6 +245,13 @@ passing an <code>FBSessionTokenCachingStrategy</code>, which yields default cach
 	<span class="tooltip">
 		<code><a href="#//api/name/defaultInstance">+&nbsp;defaultInstance</a></code>
 		<span class="tooltip"><p>Helper function called by the SDK as well as apps, in order to fetch the default strategy instance.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nullCacheInstance">+&nbsp;nullCacheInstance</a></code>
+		<span class="tooltip"><p>Helper function to return a FBSessionTokenCachingStrategy instance that does not perform any caching.</p></span>
 	</span>
 	
 	
@@ -338,6 +372,47 @@ contains the minimum token information usable by the <a href="../Classes/FBSessi
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/nullCacheInstance" title="nullCacheInstance"></a>
+	<h3 class="subsubtitle method-title">nullCacheInstance</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Helper function to return a FBSessionTokenCachingStrategy instance that does not perform any caching.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (FBSessionTokenCachingStrategy *)nullCacheInstance</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Helper function to return a FBSessionTokenCachingStrategy instance that does not perform any caching.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSessionTokenCachingStrategy.h</code><br />
+	</div>				
+	
+	
+</div>
+						
 					</div>
 					
 					
@@ -345,6 +420,60 @@ contains the minimum token information usable by the <a href="../Classes/FBSessi
 					<div class="section section-methods">
 						<a title="Instance Methods" name="instance_methods"></a>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/cacheFBAccessTokenData:" title="cacheFBAccessTokenData:"></a>
+	<h3 class="subsubtitle method-title">cacheFBAccessTokenData:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Cache the supplied token.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)cacheFBAccessTokenData:(FBAccessTokenData *)<em>accessToken</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>accessToken</em></dt>
+			<dd><p>The token instance.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Cache the supplied token.</p>
+
+<p>This essentially wraps a call to <code>cacheTokenInformation</code> so you should
+override this when providing a custom token caching strategy.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSessionTokenCachingStrategy.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/cacheTokenInformation:" title="cacheTokenInformation:"></a>
@@ -381,6 +510,9 @@ contains the minimum token information usable by the <a href="../Classes/FBSessi
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Called by <a href="../Classes/FBSession.html">FBSession</a> (and overridden by inheritors), in order to cache token information.</p>
+
+<p>You should favor overriding this instead of <code>cacheFBAccessTokenData</code> only if you intend
+to cache additional data not captured by the FBAccessTokenData type.</p>
 	</div>
 	
 	
@@ -439,6 +571,50 @@ contains the minimum token information usable by the <a href="../Classes/FBSessi
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/fetchFBAccessTokenData" title="fetchFBAccessTokenData"></a>
+	<h3 class="subsubtitle method-title">fetchFBAccessTokenData</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Fetches the cached token instance.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (FBAccessTokenData *)fetchFBAccessTokenData</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Fetches the cached token instance.</p>
+
+<p>This essentially wraps a call to <code>fetchTokenInformation</code> so you should
+override this when providing a custom token caching strategy.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSessionTokenCachingStrategy.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/fetchTokenInformation" title="fetchTokenInformation"></a>
 	<h3 class="subsubtitle method-title">fetchTokenInformation</h3>
 	
@@ -465,7 +641,9 @@ contains the minimum token information usable by the <a href="../Classes/FBSessi
 		<p>Called by <a href="../Classes/FBSession.html">FBSession</a> (and overridden by inheritors), in order to fetch cached token information</p>
 
 <p>An overriding implementation should only return a token if it
-can also return an expiration date, otherwise return nil</p>
+can also return an expiration date, otherwise return nil.
+You should favor overriding this instead of <code>fetchFBAccessTokenData</code> only if you intend
+to cache additional data not captured by the FBAccessTokenData type.</p>
 	</div>
 	
 	
@@ -588,7 +766,7 @@ indicates a default value of @&ldquo;FBAccessTokenInformationKey&rdquo;</p></dd>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Facebook. All rights reserved. (Last updated: 2012-10-05)</span><br />
+						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-03-04)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

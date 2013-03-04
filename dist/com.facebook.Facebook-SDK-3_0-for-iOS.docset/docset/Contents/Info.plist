@@ -5,9 +5,9 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.facebook.Facebook-SDK-3.1-for-iOS</string>
+	<string>com.facebook.Facebook-SDK-3.2-for-iOS</string>
 	<key>CFBundleName</key>
-	<string>Facebook SDK 3.1 for iOS</string>
+	<string>Facebook SDK 3.2 for iOS</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -17,7 +17,7 @@
 	
 	
 	<key>DocSetFeedName</key>
-	<string>Facebook SDK 3.1 for iOS</string>
+	<string>Facebook SDK 3.2 for iOS</string>
 	
 	<key>DocSetMinimumXcodeVersion</key>
 	<string>3.0</string>
@@ -29,6 +29,6 @@
 	<key>DocSetPublisherName</key>
 	<string>Facebook</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2012 Facebook. All rights reserved.</string>
+	<string>Copyright © 2013 Facebook. All rights reserved.</string>
 </dict>
 </plist>

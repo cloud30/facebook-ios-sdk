@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">Facebook SDK 3.1 for iOS </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">Facebook SDK 3.2 for iOS </a></h1>
 				<a id="developerHome" href="../index.html">Facebook</a>
 			</div>
 			
@@ -42,9 +42,15 @@
 	
 	<option value="class_methods">Class Methods</option>
 	
+	<option value="//api/name/clientToken">&nbsp;&nbsp;&nbsp;&nbsp;+ clientToken</option>
+	
 	<option value="//api/name/loggingBehavior">&nbsp;&nbsp;&nbsp;&nbsp;+ loggingBehavior</option>
 	
 	<option value="//api/name/publishInstall:">&nbsp;&nbsp;&nbsp;&nbsp;+ publishInstall:</option>
+	
+	<option value="//api/name/publishInstall:withHandler:">&nbsp;&nbsp;&nbsp;&nbsp;+ publishInstall:withHandler:</option>
+	
+	<option value="//api/name/setClientToken:">&nbsp;&nbsp;&nbsp;&nbsp;+ setClientToken:</option>
 	
 	<option value="//api/name/setLoggingBehavior:">&nbsp;&nbsp;&nbsp;&nbsp;+ setLoggingBehavior:</option>
 	
@@ -80,9 +86,15 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clientToken">clientToken</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loggingBehavior">loggingBehavior</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/publishInstall:">publishInstall:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/publishInstall:withHandler:">publishInstall:withHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setClientToken:">setClientToken:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setLoggingBehavior:">setLoggingBehavior:</a></span></li>
 	
@@ -129,7 +141,9 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Log performance characteristics</p>
+						<p>@typedef</p>
+
+<p>Block type used to get install data that is returned by server when publishInstall is called</p>
 					</div>
 					
 					
@@ -156,7 +170,7 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/setLoggingBehavior:">+&nbsp;setLoggingBehavior:</a></code>
 		<span class="tooltip"><p>Set the current Facebook SDK logging behavior.  This should consist of strings defined as
-constants with FBLogBehavior*, and can be constructed with [NSSet initWithObjects:].</p></span>
+constants with FBLogBehavior*, and can be constructed with, e.g., [NSSet initWithObjects:].</p></span>
 	</span>
 	
 	
@@ -178,10 +192,36 @@ or on first network request to Facebook.</p></span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/publishInstall:">+&nbsp;publishInstall:</a></code>
-		<span class="tooltip"><p>Manually publish an attributed install to the facebook graph.  Use this method if you have disabled
-auto publish and wish to manually send an install from your code.  This method acquires the current attribution
-id from the facebook application, queries the graph API to determine if the application has install
-attribution enabled, publishes the id, and records success to avoid reporting more than once.</p></span>
+		<span class="tooltip"><p>Manually publish an attributed install to the facebook graph. Calling this method will implicitly
+turn off auto-publish.  This method acquires the current attribution id from the facebook application, queries the
+graph API to determine if the application has install attribution enabled, publishes the id, and records
+success to avoid reporting more than once.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/publishInstall:withHandler:">+&nbsp;publishInstall:withHandler:</a></code>
+		<span class="tooltip"><p>Manually publish an attributed install to the Facebook graph, and return the server response back in
+the supplied handler.  Calling this method will implicitly turn off auto-publish.  This method acquires the
+current attribution id from the facebook application, queries the graph API to determine if the application
+has install attribution enabled, publishes the id, and records success to avoid reporting more than once.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/clientToken">+&nbsp;clientToken</a></code>
+		<span class="tooltip"><p>Retrieve the Client Token that has been set via [FBSettings setClientToken]</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setClientToken:">+&nbsp;setClientToken:</a></code>
+		<span class="tooltip"><p>Sets the Client Token for the Facebook App.  This is needed for certain API calls when made anonymously,
+without a user-based Session. Calls to FBInsights logging events are examples of this, when there may
+have been no user login established.</p></span>
 	</span>
 	
 	
@@ -199,6 +239,47 @@ attribution enabled, publishes the id, and records success to avoid reporting mo
 					<div class="section section-methods">
 						<a title="Class Methods" name="class_methods"></a>
 						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/clientToken" title="clientToken"></a>
+	<h3 class="subsubtitle method-title">clientToken</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Retrieve the Client Token that has been set via [FBSettings setClientToken]</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)clientToken</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Retrieve the Client Token that has been set via [FBSettings setClientToken]</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSettings.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/loggingBehavior" title="loggingBehavior"></a>
@@ -248,10 +329,10 @@ attribution enabled, publishes the id, and records success to avoid reporting mo
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Manually publish an attributed install to the facebook graph.  Use this method if you have disabled
-auto publish and wish to manually send an install from your code.  This method acquires the current attribution
-id from the facebook application, queries the graph API to determine if the application has install
-attribution enabled, publishes the id, and records success to avoid reporting more than once.</p>
+		<p>Manually publish an attributed install to the facebook graph. Calling this method will implicitly
+turn off auto-publish.  This method acquires the current attribution id from the facebook application, queries the
+graph API to determine if the application has install attribution enabled, publishes the id, and records
+success to avoid reporting more than once.</p>
 	</div>		
 	
     
@@ -278,10 +359,128 @@ attribution enabled, publishes the id, and records success to avoid reporting mo
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Manually publish an attributed install to the facebook graph.  Use this method if you have disabled
-auto publish and wish to manually send an install from your code.  This method acquires the current attribution
-id from the facebook application, queries the graph API to determine if the application has install
-attribution enabled, publishes the id, and records success to avoid reporting more than once.</p>
+		<p>Manually publish an attributed install to the facebook graph. Calling this method will implicitly
+turn off auto-publish.  This method acquires the current attribution id from the facebook application, queries the
+graph API to determine if the application has install attribution enabled, publishes the id, and records
+success to avoid reporting more than once.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSettings.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/publishInstall:withHandler:" title="publishInstall:withHandler:"></a>
+	<h3 class="subsubtitle method-title">publishInstall:withHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Manually publish an attributed install to the Facebook graph, and return the server response back in
+the supplied handler.  Calling this method will implicitly turn off auto-publish.  This method acquires the
+current attribution id from the facebook application, queries the graph API to determine if the application
+has install attribution enabled, publishes the id, and records success to avoid reporting more than once.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)publishInstall:(NSString *)<em>appID</em> withHandler:(FBInstallResponseDataHandler)<em>handler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>appID</em></dt>
+			<dd><p>A specific appID to publish an install for.  If nil, uses [FBSession defaultAppID].</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>A block to call with the server&rsquo;s response.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Manually publish an attributed install to the Facebook graph, and return the server response back in
+the supplied handler.  Calling this method will implicitly turn off auto-publish.  This method acquires the
+current attribution id from the facebook application, queries the graph API to determine if the application
+has install attribution enabled, publishes the id, and records success to avoid reporting more than once.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSettings.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setClientToken:" title="setClientToken:"></a>
+	<h3 class="subsubtitle method-title">setClientToken:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the Client Token for the Facebook App.  This is needed for certain API calls when made anonymously,
+without a user-based Session. Calls to FBInsights logging events are examples of this, when there may
+have been no user login established.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)setClientToken:(NSString *)<em>clientToken</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>clientToken</em></dt>
+			<dd><p>The Facebook App&rsquo;s &ldquo;client token&rdquo;, which, for a given appid can be found in the Security
+section of the Advanced tab of the Facebook App settings found at <a href="https://developers.facebook.com/apps/[your-app-id]">https://developers.facebook.com/apps/[your-app-id]</a></p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Sets the Client Token for the Facebook App.  This is needed for certain API calls when made anonymously,
+without a user-based Session. Calls to FBInsights logging events are examples of this, when there may
+have been no user login established.</p>
 	</div>
 	
 	
@@ -306,7 +505,7 @@ attribution enabled, publishes the id, and records success to avoid reporting mo
 	
 	<div class="method-subsection brief-description">
 		<p>Set the current Facebook SDK logging behavior.  This should consist of strings defined as
-constants with FBLogBehavior*, and can be constructed with [NSSet initWithObjects:].</p>
+constants with FBLogBehavior*, and can be constructed with, e.g., [NSSet initWithObjects:].</p>
 	</div>		
 	
     
@@ -320,7 +519,8 @@ constants with FBLogBehavior*, and can be constructed with [NSSet initWithObject
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>loggingBehavior</em></dt>
-			<dd><p>A set of strings indicating what information should be logged.</p></dd>
+			<dd><p>A set of strings indicating what information should be logged.  If nil is provided, the logging
+behavior is reset to the default set of enabled behaviors.  Set in an empty set in order to disable all logging.</p></dd>
 		</dl>
 		
 	</div>
@@ -334,7 +534,7 @@ constants with FBLogBehavior*, and can be constructed with [NSSet initWithObject
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Set the current Facebook SDK logging behavior.  This should consist of strings defined as
-constants with FBLogBehavior*, and can be constructed with [NSSet initWithObjects:].</p>
+constants with FBLogBehavior*, and can be constructed with, e.g., [NSSet initWithObjects:].</p>
 	</div>
 	
 	
@@ -460,7 +660,7 @@ or on first network request to Facebook.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Facebook. All rights reserved. (Last updated: 2012-10-05)</span><br />
+						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-03-04)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						
