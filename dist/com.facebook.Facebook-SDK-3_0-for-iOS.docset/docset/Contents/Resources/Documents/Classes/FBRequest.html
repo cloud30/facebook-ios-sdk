@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">Facebook SDK 3.2 for iOS </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">Facebook SDK 3.5.1 for iOS </a></h1>
 				<a id="developerHome" href="../index.html">Facebook</a>
 			</div>
 			
@@ -57,6 +57,10 @@
 	
 	<option value="class_methods">Class Methods</option>
 	
+	<option value="//api/name/requestForCustomAudienceThirdPartyID:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestForCustomAudienceThirdPartyID:</option>
+	
+	<option value="//api/name/requestForDeleteObject:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestForDeleteObject:</option>
+	
 	<option value="//api/name/requestForGraphPath:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestForGraphPath:</option>
 	
 	<option value="//api/name/requestForMe">&nbsp;&nbsp;&nbsp;&nbsp;+ requestForMe</option>
@@ -65,13 +69,23 @@
 	
 	<option value="//api/name/requestForPlacesSearchAtCoordinate:radiusInMeters:resultsLimit:searchText:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestForPlacesSearchAtCoordinate:radiusInMeters:resultsLimit:searchText:</option>
 	
+	<option value="//api/name/requestForPostOpenGraphObject:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestForPostOpenGraphObject:</option>
+	
+	<option value="//api/name/requestForPostOpenGraphObjectWithType:title:image:url:description:objectProperties:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestForPostOpenGraphObjectWithType:title:image:url:description:objectProperties:</option>
+	
 	<option value="//api/name/requestForPostStatusUpdate:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestForPostStatusUpdate:</option>
 	
 	<option value="//api/name/requestForPostStatusUpdate:place:tags:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestForPostStatusUpdate:place:tags:</option>
 	
 	<option value="//api/name/requestForPostWithGraphPath:graphObject:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestForPostWithGraphPath:graphObject:</option>
 	
+	<option value="//api/name/requestForUpdateOpenGraphObject:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestForUpdateOpenGraphObject:</option>
+	
+	<option value="//api/name/requestForUpdateOpenGraphObjectWithId:title:image:url:description:objectProperties:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestForUpdateOpenGraphObjectWithId:title:image:url:description:objectProperties:</option>
+	
 	<option value="//api/name/requestForUploadPhoto:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestForUploadPhoto:</option>
+	
+	<option value="//api/name/requestForUploadStagingResourceWithImage:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestForUploadStagingResourceWithImage:</option>
 	
 	<option value="//api/name/requestWithGraphPath:parameters:HTTPMethod:">&nbsp;&nbsp;&nbsp;&nbsp;+ requestWithGraphPath:parameters:HTTPMethod:</option>
 	
@@ -134,6 +148,10 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestForCustomAudienceThirdPartyID:">requestForCustomAudienceThirdPartyID:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestForDeleteObject:">requestForDeleteObject:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestForGraphPath:">requestForGraphPath:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestForMe">requestForMe</a></span></li>
@@ -142,13 +160,23 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestForPlacesSearchAtCoordinate:radiusInMeters:resultsLimit:searchText:">requestForPlacesSearchAtCoordinate:radiusInMeters:resultsLimit:searchText:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestForPostOpenGraphObject:">requestForPostOpenGraphObject:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestForPostOpenGraphObjectWithType:title:image:url:description:objectProperties:">requestForPostOpenGraphObjectWithType:title:image:url:description:objectProperties:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestForPostStatusUpdate:">requestForPostStatusUpdate:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestForPostStatusUpdate:place:tags:">requestForPostStatusUpdate:place:tags:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestForPostWithGraphPath:graphObject:">requestForPostWithGraphPath:graphObject:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestForUpdateOpenGraphObject:">requestForUpdateOpenGraphObject:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestForUpdateOpenGraphObjectWithId:title:image:url:description:objectProperties:">requestForUpdateOpenGraphObjectWithId:title:image:url:description:objectProperties:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestForUploadPhoto:">requestForUploadPhoto:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestForUploadStagingResourceWithImage:">requestForUploadStagingResourceWithImage:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWithGraphPath:parameters:HTTPMethod:">requestWithGraphPath:parameters:HTTPMethod:</a></span></li>
 	
@@ -371,8 +399,24 @@ for a given location using the active session.</p></span>
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/requestForCustomAudienceThirdPartyID:">+&nbsp;requestForCustomAudienceThirdPartyID:</a></code>
+		<span class="tooltip"><p>Creates a request representing the Graph API call to retrieve a Custom Audience &ldquo;thirdy party ID&rdquo; for the app&rsquo;s Facebook user.
+Callers will send this ID back to their own servers, collect up a set to create a Facebook Custom Audience with,
+and then use the resultant Custom Audience to target ads.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/requestForGraphPath:">+&nbsp;requestForGraphPath:</a></code>
 		<span class="tooltip"><p>Returns a newly initialized request object that can be used to make a Graph API call for the active session.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestForDeleteObject:">+&nbsp;requestForDeleteObject:</a></code>
+		<span class="tooltip"><p>Creates request representing a DELETE to a object.</p></span>
 	</span>
 	
 	
@@ -387,6 +431,49 @@ for a given location using the active session.</p></span>
 	<span class="tooltip">
 		<code><a href="#//api/name/requestWithGraphPath:parameters:HTTPMethod:">+&nbsp;requestWithGraphPath:parameters:HTTPMethod:</a></code>
 		<span class="tooltip"><p>Returns a newly initialized request object that can be used to make a Graph API call for the active session.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestForPostOpenGraphObject:">+&nbsp;requestForPostOpenGraphObject:</a></code>
+		<span class="tooltip"><p>Returns a newly initialized request object that can be used to create a user owned
+Open Graph object for the active session.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestForPostOpenGraphObjectWithType:title:image:url:description:objectProperties:">+&nbsp;requestForPostOpenGraphObjectWithType:title:image:url:description:objectProperties:</a></code>
+		<span class="tooltip"><p>Returns a newly initialized request object that can be used to create a user owned
+Open Graph object for the active session.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestForUpdateOpenGraphObject:">+&nbsp;requestForUpdateOpenGraphObject:</a></code>
+		<span class="tooltip"><p>Returns a newly initialized request object that can be used to update a user owned
+Open Graph object for the active session.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestForUpdateOpenGraphObjectWithId:title:image:url:description:objectProperties:">+&nbsp;requestForUpdateOpenGraphObjectWithId:title:image:url:description:objectProperties:</a></code>
+		<span class="tooltip"><p>Returns a newly initialized request object that can be used to update a user owned
+Open Graph object for the active session.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestForUploadStagingResourceWithImage:">+&nbsp;requestForUploadStagingResourceWithImage:</a></code>
+		<span class="tooltip"><p>Returns a newly initialized request object that can be used to upload an image
+to create a staging resource. Staging resources allow you to post binary data
+such as images, in preparation for a post of an open graph object or action
+which references the image. The URI returned when uploading a staging resource
+may be passed as the image property for an open graph object or action.</p></span>
 	</span>
 	
 	
@@ -689,6 +776,136 @@ sending the request.</p>
 						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/requestForCustomAudienceThirdPartyID:" title="requestForCustomAudienceThirdPartyID:"></a>
+	<h3 class="subsubtitle method-title">requestForCustomAudienceThirdPartyID:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a request representing the Graph API call to retrieve a Custom Audience &ldquo;thirdy party ID&rdquo; for the app&rsquo;s Facebook user.
+Callers will send this ID back to their own servers, collect up a set to create a Facebook Custom Audience with,
+and then use the resultant Custom Audience to target ads.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (FBRequest *)requestForCustomAudienceThirdPartyID:(FBSession *)<em>session</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>session</em></dt>
+			<dd><p>The FBSession to use to establish the user&rsquo;s identity for users logged into Facebook through this app.
+If <code>nil</code>, then the activeSession is used.  If the session is not open, then the appID|clientToken are used to construct the access
+token for the request.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Creates a request representing the Graph API call to retrieve a Custom Audience &ldquo;thirdy party ID&rdquo; for the app&rsquo;s Facebook user.
+Callers will send this ID back to their own servers, collect up a set to create a Facebook Custom Audience with,
+and then use the resultant Custom Audience to target ads.</p>
+
+<p>This method will thrown an exception if either <a href="../Classes/FBSettings.html#//api/name/defaultAppID">[FBSettings defaultAppID]</a> or <a href="../Classes/FBSettings.html#//api/name/clientToken">[FBSettings clientToken]</a> are <code>nil</code>.  The appID won&rsquo;t be nil when the pList
+includes the appID, or if it&rsquo;s explicitly set.  The clientToken needs to be set via <a href="../Classes/FBSettings.html#//api/name/setClientToken:">[FBSettings setClientToken:]</a>.</p>
+
+<p>The JSON in the request&rsquo;s response will include an &ldquo;custom_audience_third_party_id&rdquo; key/value pair, with the value being the ID retrieved.
+This ID is an encrypted encoding of the Facebook user&rsquo;s ID and the invoking Facebook app ID.
+Multiple calls with the same user will return different IDs, thus these IDs cannot be used to correlate behavior
+across devices or applications, and are only meaningful when sent back to Facebook for creating Custom Audiences.</p>
+
+<p>The ID retrieved represents the Facebook user identified in the following way: if the specified session (or activeSession if the specified
+session is <code>nil</code>) is open, the ID will represent the user associated with the activeSession; otherwise the ID will represent the user logged into the
+native Facebook app on the device.  If there is no native Facebook app, no one is logged into it, or the user has opted out
+at the iOS level from ad tracking, then a <code>nil</code> ID will be returned.</p>
+
+<p>This method itself returning <code>nil</code> indicates that either the user has opted-out (via iOS) from Ad Tracking, or a specific Facebook user cannot
+be identified.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestForDeleteObject:" title="requestForDeleteObject:"></a>
+	<h3 class="subsubtitle method-title">requestForDeleteObject:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates request representing a DELETE to a object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (FBRequest *)requestForDeleteObject:(id)<em>object</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>object</em></dt>
+			<dd><p>This can be an NSString, NSNumber or NSDictionary representing an object to delete</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Creates request representing a DELETE to a object.</p>
+
+<p>This method simplifies the preparation of a Graph API call.</p>
+
+<p>This method does not initialize an <a href="../Classes/FBRequestConnection.html">FBRequestConnection</a> object. To initiate the API
+call first instantiate an <a href="../Classes/FBRequestConnection.html">FBRequestConnection</a> object, add the request to this object,
+then call the <code>start</code> method on the connection instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/requestForGraphPath:" title="requestForGraphPath:"></a>
 	<h3 class="subsubtitle method-title">requestForGraphPath:</h3>
 	
@@ -928,6 +1145,149 @@ the nearby locations.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/requestForPostOpenGraphObject:" title="requestForPostOpenGraphObject:"></a>
+	<h3 class="subsubtitle method-title">requestForPostOpenGraphObject:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a newly initialized request object that can be used to create a user owned
+Open Graph object for the active session.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (FBRequest *)requestForPostOpenGraphObject:(id&lt;FBOpenGraphObject&gt;)<em>object</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>object</em></dt>
+			<dd><p>The Open Graph object to create. Some common expected fields include &ldquo;title&rdquo;, &ldquo;image&rdquo;, &ldquo;url&rdquo;, etc.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a newly initialized request object that can be used to create a user owned
+Open Graph object for the active session.</p>
+
+<p>This method simplifies the preparation of a Graph API call.</p>
+
+<p>This method does not initialize an <a href="../Classes/FBRequestConnection.html">FBRequestConnection</a> object. To initiate the API
+call first instantiate an <a href="../Classes/FBRequestConnection.html">FBRequestConnection</a> object, add the request to this object,
+then call the <code>start</code> method on the connection instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestForPostOpenGraphObjectWithType:title:image:url:description:objectProperties:" title="requestForPostOpenGraphObjectWithType:title:image:url:description:objectProperties:"></a>
+	<h3 class="subsubtitle method-title">requestForPostOpenGraphObjectWithType:title:image:url:description:objectProperties:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a newly initialized request object that can be used to create a user owned
+Open Graph object for the active session.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (FBRequest *)requestForPostOpenGraphObjectWithType:(NSString *)<em>type</em> title:(NSString *)<em>title</em> image:(id)<em>image</em> url:(id)<em>url</em> description:(NSString *)<em>description</em> objectProperties:(NSDictionary *)<em>objectProperties</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>The fully-specified Open Graph object type (e.g., my_app_namespace:my_object_name)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>title</em></dt>
+			<dd><p>The title of the Open Graph object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>image</em></dt>
+			<dd><p>The link to an image to be associated with the Open Graph object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>url</em></dt>
+			<dd><p>The url to be associated with the Open Graph object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>description</em></dt>
+			<dd><p>The description to be associated with the object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>objectProperties</em></dt>
+			<dd><p>Any additional properties for the Open Graph object.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a newly initialized request object that can be used to create a user owned
+Open Graph object for the active session.</p>
+
+<p>This method simplifies the preparation of a Graph API call.</p>
+
+<p>This method does not initialize an <a href="../Classes/FBRequestConnection.html">FBRequestConnection</a> object. To initiate the API
+call first instantiate an <a href="../Classes/FBRequestConnection.html">FBRequestConnection</a> object, add the request to this object,
+then call the <code>start</code> method on the connection instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/requestForPostStatusUpdate:" title="requestForPostStatusUpdate:"></a>
 	<h3 class="subsubtitle method-title">requestForPostStatusUpdate:</h3>
 	
@@ -1110,6 +1470,149 @@ then call the <code>start</code> method on the connection instance.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/requestForUpdateOpenGraphObject:" title="requestForUpdateOpenGraphObject:"></a>
+	<h3 class="subsubtitle method-title">requestForUpdateOpenGraphObject:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a newly initialized request object that can be used to update a user owned
+Open Graph object for the active session.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (FBRequest *)requestForUpdateOpenGraphObject:(id&lt;FBOpenGraphObject&gt;)<em>object</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>object</em></dt>
+			<dd><p>The Open Graph object to update the existing object with.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a newly initialized request object that can be used to update a user owned
+Open Graph object for the active session.</p>
+
+<p>This method simplifies the preparation of a Graph API call.</p>
+
+<p>This method does not initialize an <a href="../Classes/FBRequestConnection.html">FBRequestConnection</a> object. To initiate the API
+call first instantiate an <a href="../Classes/FBRequestConnection.html">FBRequestConnection</a> object, add the request to this object,
+then call the <code>start</code> method on the connection instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestForUpdateOpenGraphObjectWithId:title:image:url:description:objectProperties:" title="requestForUpdateOpenGraphObjectWithId:title:image:url:description:objectProperties:"></a>
+	<h3 class="subsubtitle method-title">requestForUpdateOpenGraphObjectWithId:title:image:url:description:objectProperties:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a newly initialized request object that can be used to update a user owned
+Open Graph object for the active session.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (FBRequest *)requestForUpdateOpenGraphObjectWithId:(id)<em>objectId</em> title:(NSString *)<em>title</em> image:(id)<em>image</em> url:(id)<em>url</em> description:(NSString *)<em>description</em> objectProperties:(NSDictionary *)<em>objectProperties</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>objectId</em></dt>
+			<dd><p>The id of the Open Graph object to update.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>title</em></dt>
+			<dd><p>The updated title of the Open Graph object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>image</em></dt>
+			<dd><p>The updated link to an image to be associated with the Open Graph object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>url</em></dt>
+			<dd><p>The updated url to be associated with the Open Graph object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>description</em></dt>
+			<dd><p>The updated description of the Open Graph object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>objectProperties</em></dt>
+			<dd><p>Any additional properties to update for the Open Graph object.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a newly initialized request object that can be used to update a user owned
+Open Graph object for the active session.</p>
+
+<p>This method simplifies the preparation of a Graph API call.</p>
+
+<p>This method does not initialize an <a href="../Classes/FBRequestConnection.html">FBRequestConnection</a> object. To initiate the API
+call first instantiate an <a href="../Classes/FBRequestConnection.html">FBRequestConnection</a> object, add the request to this object,
+then call the <code>start</code> method on the connection instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/requestForUploadPhoto:" title="requestForUploadPhoto:"></a>
 	<h3 class="subsubtitle method-title">requestForUploadPhoto:</h3>
 	
@@ -1149,6 +1652,71 @@ then call the <code>start</code> method on the connection instance.</p>
 
 <p>To post a photo to a specific album, get the <code>FBRequest</code> returned from this method
 call, then modify the request parameters by adding the album ID to an &ldquo;album&rdquo; key.</p>
+
+<p>This method does not initialize an <a href="../Classes/FBRequestConnection.html">FBRequestConnection</a> object. To initiate the API
+call first instantiate an <a href="../Classes/FBRequestConnection.html">FBRequestConnection</a> object, add the request to this object,
+then call the <code>start</code> method on the connection instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestForUploadStagingResourceWithImage:" title="requestForUploadStagingResourceWithImage:"></a>
+	<h3 class="subsubtitle method-title">requestForUploadStagingResourceWithImage:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a newly initialized request object that can be used to upload an image
+to create a staging resource. Staging resources allow you to post binary data
+such as images, in preparation for a post of an open graph object or action
+which references the image. The URI returned when uploading a staging resource
+may be passed as the image property for an open graph object or action.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (FBRequest *)requestForUploadStagingResourceWithImage:(UIImage *)<em>image</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>image</em></dt>
+			<dd><p>A <code>UIImage</code> for the image to upload.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a newly initialized request object that can be used to upload an image
+to create a staging resource. Staging resources allow you to post binary data
+such as images, in preparation for a post of an open graph object or action
+which references the image. The URI returned when uploading a staging resource
+may be passed as the image property for an open graph object or action.</p>
+
+<p>This method simplifies the preparation of a Graph API call.</p>
 
 <p>This method does not initialize an <a href="../Classes/FBRequestConnection.html">FBRequestConnection</a> object. To initiate the API
 call first instantiate an <a href="../Classes/FBRequestConnection.html">FBRequestConnection</a> object, add the request to this object,
@@ -1633,7 +2201,7 @@ request completes with a success, error, or cancel.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-03-04)</span><br />
+						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-05-03)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

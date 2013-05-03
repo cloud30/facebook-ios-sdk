@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">Facebook SDK 3.2 for iOS </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">Facebook SDK 3.5.1 for iOS </a></h1>
 				<a id="developerHome" href="../index.html">Facebook</a>
 			</div>
 			
@@ -48,6 +48,12 @@
 	
 	<option value="//api/name/isGraphObjectID:sameAs:">&nbsp;&nbsp;&nbsp;&nbsp;+ isGraphObjectID:sameAs:</option>
 	
+	<option value="//api/name/openGraphActionForPost">&nbsp;&nbsp;&nbsp;&nbsp;+ openGraphActionForPost</option>
+	
+	<option value="//api/name/openGraphObjectForPost">&nbsp;&nbsp;&nbsp;&nbsp;+ openGraphObjectForPost</option>
+	
+	<option value="//api/name/openGraphObjectForPostWithType:title:image:url:description:">&nbsp;&nbsp;&nbsp;&nbsp;+ openGraphObjectForPostWithType:title:image:url:description:</option>
+	
 	
 	
 	
@@ -81,6 +87,12 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/graphObjectWrappingDictionary:">graphObjectWrappingDictionary:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isGraphObjectID:sameAs:">isGraphObjectID:sameAs:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openGraphActionForPost">openGraphActionForPost</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openGraphObjectForPost">openGraphObjectForPost</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openGraphObjectForPostWithType:title:image:url:description:">openGraphObjectForPostWithType:title:image:url:description:</a></span></li>
 	
 </ul></li>
 
@@ -148,7 +160,7 @@ access instances and instance members, favoring the protocol.</p>
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/graphObject">+&nbsp;graphObject</a></code>
-		<span class="tooltip"><p>Used to create a graph object for, usually for use in posting a new graph object or action</p></span>
+		<span class="tooltip"><p>Used to create a graph object, usually for use in posting a new graph object or action.</p></span>
 	</span>
 	
 	
@@ -156,6 +168,27 @@ access instances and instance members, favoring the protocol.</p>
 	<span class="tooltip">
 		<code><a href="#//api/name/graphObjectWrappingDictionary:">+&nbsp;graphObjectWrappingDictionary:</a></code>
 		<span class="tooltip"><p>Used to wrap an existing dictionary with a <code>FBGraphObject</code> facade</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/openGraphActionForPost">+&nbsp;openGraphActionForPost</a></code>
+		<span class="tooltip"><p>Used to create a graph object that&rsquo;s provisioned for POST, usually for use in posting a new Open Graph Action.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/openGraphObjectForPost">+&nbsp;openGraphObjectForPost</a></code>
+		<span class="tooltip"><p>Used to create a graph object that&rsquo;s provisioned for POST, usually for use in posting a new Open Graph object.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/openGraphObjectForPostWithType:title:image:url:description:">+&nbsp;openGraphObjectForPostWithType:title:image:url:description:</a></code>
+		<span class="tooltip"><p>Used to create a graph object that&rsquo;s provisioned for POST, usually for use in posting a new Open Graph object.</p></span>
 	</span>
 	
 	
@@ -191,7 +224,7 @@ subsets of fields).</p></span>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Used to create a graph object for, usually for use in posting a new graph object or action</p>
+		<p>Used to create a graph object, usually for use in posting a new graph object or action.</p>
 	</div>		
 	
     
@@ -208,7 +241,7 @@ subsets of fields).</p></span>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Used to create a graph object for, usually for use in posting a new graph object or action</p>
+		<p>Used to create a graph object, usually for use in posting a new graph object or action.</p>
 	</div>
 	
 	
@@ -349,6 +382,159 @@ subsets of fields).</p>
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/openGraphActionForPost" title="openGraphActionForPost"></a>
+	<h3 class="subsubtitle method-title">openGraphActionForPost</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Used to create a graph object that&rsquo;s provisioned for POST, usually for use in posting a new Open Graph Action.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSMutableDictionary&lt;FBOpenGraphAction&gt; *)openGraphActionForPost</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Used to create a graph object that&rsquo;s provisioned for POST, usually for use in posting a new Open Graph Action.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBGraphObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/openGraphObjectForPost" title="openGraphObjectForPost"></a>
+	<h3 class="subsubtitle method-title">openGraphObjectForPost</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Used to create a graph object that&rsquo;s provisioned for POST, usually for use in posting a new Open Graph object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSMutableDictionary&lt;FBOpenGraphObject&gt; *)openGraphObjectForPost</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Used to create a graph object that&rsquo;s provisioned for POST, usually for use in posting a new Open Graph object.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBGraphObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/openGraphObjectForPostWithType:title:image:url:description:" title="openGraphObjectForPostWithType:title:image:url:description:"></a>
+	<h3 class="subsubtitle method-title">openGraphObjectForPostWithType:title:image:url:description:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Used to create a graph object that&rsquo;s provisioned for POST, usually for use in posting a new Open Graph object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSMutableDictionary&lt;FBOpenGraphObject&gt; *)openGraphObjectForPostWithType:(NSString *)<em>type</em> title:(NSString *)<em>title</em> image:(id)<em>image</em> url:(id)<em>url</em> description:(NSString *)<em>description</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>the object type name, in the form namespace:typename</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>title</em></dt>
+			<dd><p>a title for the object</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>image</em></dt>
+			<dd><p>the image property for the object</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>url</em></dt>
+			<dd><p>the url property for the object</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>description</em></dt>
+			<dd><p>the description for the object</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Used to create a graph object that&rsquo;s provisioned for POST, usually for use in posting a new Open Graph object.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBGraphObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
 					</div>
 					
 					
@@ -364,7 +550,7 @@ subsets of fields).</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-03-04)</span><br />
+						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-05-03)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

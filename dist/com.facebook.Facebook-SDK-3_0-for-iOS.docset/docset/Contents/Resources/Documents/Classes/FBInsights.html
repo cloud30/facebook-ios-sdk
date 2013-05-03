@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">Facebook SDK 3.2 for iOS </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">Facebook SDK 3.5.1 for iOS </a></h1>
 				<a id="developerHome" href="../index.html">Facebook</a>
 			</div>
 			
@@ -191,6 +191,8 @@ be used per event, on the order of 10.  This is not just for an individual call,
 invocations for that eventName.</li>
 <li>Event names and parameter names (the keys in the NSDictionary) must be between 2 and 40 characters</li>
 <li>The length of each parameter value can be no more than on the order of 100 characters.</li>
+<li>When logging events, the &ldquo;client token&rdquo; must be set.  An exception will be thrown if it isn&rsquo;t.  See
+ [FBSettings setClientToken] for more information.</li>
 </ul>
 
 					</div>
@@ -452,7 +454,10 @@ a conversion pixel.</p></dd>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>value</em></dt>
-			<dd><p>Value of what the logging of this pixel is worth to you.  The currency that this is expressed in doesn&rsquo;t matter, so long as it is consistent across all logging for this pixel.</p></dd>
+			<dd><p>Value of what the logging of this pixel is worth to you.  The currency that this is expressed in doesn&rsquo;t matter, so long as it is consistent across all logging for this pixel.</p>
+
+<pre><code>                  This value will be rounded to the thousandths place (e.g., 12.34567 becomes 12.346).
+</code></pre></dd>
 		</dl>
 		
 	</div>
@@ -470,7 +475,8 @@ a conversion pixel.</p></dd>
 <pre><code>     This event immediately triggers a flush of the `FBInsights` event queue, unless the `flushBehavior` is set
 </code></pre>
 
-<p>to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p>
+<p>to <code>FBInsightsFlushBehaviorExplicitOnly</code>.  The &ldquo;client token&rdquo; must be set via [FBSettings setClientToken] prior to
+calling this method.  An exception is thrown if it&rsquo;s not.</p>
 	</div>
 	
 	
@@ -514,7 +520,10 @@ a conversion pixel.</p></dd>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>value</em></dt>
-			<dd><p>Value of what the logging of this pixel is worth to you.  The currency that this is expressed in doesn&rsquo;t matter, so long as it is consistent across all logging for this pixel.</p></dd>
+			<dd><p>Value of what the logging of this pixel is worth to you.  The currency that this is expressed in doesn&rsquo;t matter, so long as it is consistent across all logging for this pixel.</p>
+
+<pre><code>                  This value will be rounded to the thousandths place (e.g., 12.34567 becomes 12.346).
+</code></pre></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -538,7 +547,8 @@ is associated with that <a href="../Classes/FBSession.html">FBSession</a>.  A va
 <pre><code>     This event immediately triggers a flush of the `FBInsights` event queue, unless the `flushBehavior` is set
 </code></pre>
 
-<p>to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p>
+<p>to <code>FBInsightsFlushBehaviorExplicitOnly</code>.  The &ldquo;client token&rdquo; must be set via [FBSettings setClientToken] prior to
+calling this method.  An exception is thrown if it&rsquo;s not.</p>
 	</div>
 	
 	
@@ -576,7 +586,10 @@ is associated with that <a href="../Classes/FBSession.html">FBSession</a>.  A va
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>purchaseAmount</em></dt>
-			<dd><p>Purchase amount to be logged, as expressed in the specified currency.</p></dd>
+			<dd><p>Purchase amount to be logged, as expressed in the specified currency.  This value</p>
+
+<pre><code>                      will be rounded to the thousandths place (e.g., 12.34567 becomes 12.346).
+</code></pre></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -600,7 +613,8 @@ specific values.  One reference for these is <a href="http://en.wikipedia.org/wi
 <pre><code>         This event immediately triggers a flush of the `FBInsights` event queue, unless the `flushBehavior` is set
 </code></pre>
 
-<p>to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p>
+<p>to <code>FBInsightsFlushBehaviorExplicitOnly</code>.  The &ldquo;client token&rdquo; must be set via [FBSettings setClientToken] prior to
+calling this method.  An exception is thrown if it&rsquo;s not.</p>
 	</div>
 	
 	
@@ -639,7 +653,10 @@ additional characteristics describing the purchase.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>purchaseAmount</em></dt>
-			<dd><p>Purchase amount to be logged, as expressed in the specified currency.</p></dd>
+			<dd><p>Purchase amount to be logged, as expressed in the specified currency.This value</p>
+
+<pre><code>                    will be rounded to the thousandths place (e.g., 12.34567 becomes 12.346).
+</code></pre></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -671,7 +688,8 @@ additional characteristics describing the purchase.</p>
 <pre><code>         This event immediately triggers a flush of the `FBInsights` event queue, unless the `flushBehavior` is set
 </code></pre>
 
-<p>to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p>
+<p>to <code>FBInsightsFlushBehaviorExplicitOnly</code>.  The &ldquo;client token&rdquo; must be set via [FBSettings setClientToken] prior to
+calling this method.  An exception is thrown if it&rsquo;s not.</p>
 	</div>
 	
 	
@@ -710,7 +728,10 @@ additional characteristics describing the purchase, as well as an <a href="../Cl
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>purchaseAmount</em></dt>
-			<dd><p>Purchase amount to be logged, as expressed in the specified currency.</p></dd>
+			<dd><p>Purchase amount to be logged, as expressed in the specified currency.This value</p>
+
+<pre><code>                    will be rounded to the thousandths place (e.g., 12.34567 becomes 12.346).
+</code></pre></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -748,7 +769,8 @@ additional characteristics describing the purchase, as well as an <a href="../Cl
 <pre><code>       This event immediately triggers a flush of the `FBInsights` event queue, unless the `flushBehavior` is set
 </code></pre>
 
-<p>to <code>FBInsightsFlushBehaviorExplicitOnly</code>.</p>
+<p>to <code>FBInsightsFlushBehaviorExplicitOnly</code>.  The &ldquo;client token&rdquo; must be set via [FBSettings setClientToken] prior to
+calling this method.  An exception is thrown if it&rsquo;s not.</p>
 	</div>
 	
 	
@@ -885,7 +907,7 @@ events by app version.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-03-04)</span><br />
+						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-05-03)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

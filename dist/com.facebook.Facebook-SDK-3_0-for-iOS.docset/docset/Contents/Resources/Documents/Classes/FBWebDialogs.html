@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">Facebook SDK 3.2 for iOS </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">Facebook SDK 3.5.1 for iOS </a></h1>
 				<a id="developerHome" href="../index.html">Facebook</a>
 			</div>
 			
@@ -44,9 +44,13 @@
 	
 	<option value="//api/name/presentDialogModallyWithSession:dialog:parameters:handler:">&nbsp;&nbsp;&nbsp;&nbsp;+ presentDialogModallyWithSession:dialog:parameters:handler:</option>
 	
+	<option value="//api/name/presentDialogModallyWithSession:dialog:parameters:handler:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;+ presentDialogModallyWithSession:dialog:parameters:handler:delegate:</option>
+	
 	<option value="//api/name/presentFeedDialogModallyWithSession:parameters:handler:">&nbsp;&nbsp;&nbsp;&nbsp;+ presentFeedDialogModallyWithSession:parameters:handler:</option>
 	
 	<option value="//api/name/presentRequestsDialogModallyWithSession:message:title:parameters:handler:">&nbsp;&nbsp;&nbsp;&nbsp;+ presentRequestsDialogModallyWithSession:message:title:parameters:handler:</option>
+	
+	<option value="//api/name/presentRequestsDialogModallyWithSession:message:title:parameters:handler:friendCache:">&nbsp;&nbsp;&nbsp;&nbsp;+ presentRequestsDialogModallyWithSession:message:title:parameters:handler:friendCache:</option>
 	
 	
 	
@@ -78,9 +82,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/presentDialogModallyWithSession:dialog:parameters:handler:">presentDialogModallyWithSession:dialog:parameters:handler:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/presentDialogModallyWithSession:dialog:parameters:handler:delegate:">presentDialogModallyWithSession:dialog:parameters:handler:delegate:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/presentFeedDialogModallyWithSession:parameters:handler:">presentFeedDialogModallyWithSession:parameters:handler:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/presentRequestsDialogModallyWithSession:message:title:parameters:handler:">presentRequestsDialogModallyWithSession:message:title:parameters:handler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/presentRequestsDialogModallyWithSession:message:title:parameters:handler:friendCache:">presentRequestsDialogModallyWithSession:message:title:parameters:handler:friendCache:</a></span></li>
 	
 </ul></li>
 
@@ -147,7 +155,22 @@ such as feed or apprequest.</p></span>
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/presentDialogModallyWithSession:dialog:parameters:handler:delegate:">+&nbsp;presentDialogModallyWithSession:dialog:parameters:handler:delegate:</a></code>
+		<span class="tooltip"><p>Presents a Facebook web dialog (https://developers.facebook.com/docs/reference/dialogs/)
+such as feed or apprequest.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/presentRequestsDialogModallyWithSession:message:title:parameters:handler:">+&nbsp;presentRequestsDialogModallyWithSession:message:title:parameters:handler:</a></code>
+		<span class="tooltip"><p>Presents a Facebook apprequest dialog.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/presentRequestsDialogModallyWithSession:message:title:parameters:handler:friendCache:">+&nbsp;presentRequestsDialogModallyWithSession:message:title:parameters:handler:friendCache:</a></code>
 		<span class="tooltip"><p>Presents a Facebook apprequest dialog.</p></span>
 	</span>
 	
@@ -214,6 +237,82 @@ the active session if present, or returns NO, if not.</p></dd>
 			<dt><em>handler</em></dt>
 			<dd><p>An optional handler that will be called when the dialog is dismissed. Note,
 that if the method returns NO, the handler is not called. May be nil.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Presents a Facebook web dialog (https://developers.facebook.com/docs/reference/dialogs/)
+such as feed or apprequest.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBWebDialogs.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/presentDialogModallyWithSession:dialog:parameters:handler:delegate:" title="presentDialogModallyWithSession:dialog:parameters:handler:delegate:"></a>
+	<h3 class="subsubtitle method-title">presentDialogModallyWithSession:dialog:parameters:handler:delegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Presents a Facebook web dialog (https://developers.facebook.com/docs/reference/dialogs/)
+such as feed or apprequest.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)presentDialogModallyWithSession:(FBSession *)<em>session</em> dialog:(NSString *)<em>dialog</em> parameters:(NSDictionary *)<em>parameters</em> handler:(FBWebDialogHandler)<em>handler</em> delegate:(id&lt;FBWebDialogsDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>session</em></dt>
+			<dd><p>Represents the session to use for the dialog. May be nil, which uses
+the active session if present, or returns NO, if not.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>dialog</em></dt>
+			<dd><p>Represents the dialog or method name, such as @&ldquo;feed&rdquo;</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>parameters</em></dt>
+			<dd><p>A dictionary of parameters to be passed to the dialog</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>An optional handler that will be called when the dialog is dismissed. Note,
+that if the method returns NO, the handler is not called. May be nil.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>An optional delegate to allow for advanced processing of web based
+dialogs. See &lsquo;FBWebDialogsDelegate&rsquo; for more details.</p></dd>
 		</dl>
 		
 	</div>
@@ -378,6 +477,85 @@ the active session if present.</p></dd>
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/presentRequestsDialogModallyWithSession:message:title:parameters:handler:friendCache:" title="presentRequestsDialogModallyWithSession:message:title:parameters:handler:friendCache:"></a>
+	<h3 class="subsubtitle method-title">presentRequestsDialogModallyWithSession:message:title:parameters:handler:friendCache:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Presents a Facebook apprequest dialog.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)presentRequestsDialogModallyWithSession:(FBSession *)<em>session</em> message:(NSString *)<em>message</em> title:(NSString *)<em>title</em> parameters:(NSDictionary *)<em>parameters</em> handler:(FBWebDialogHandler)<em>handler</em> friendCache:(FBFrictionlessRecipientCache *)<em>friendCache</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>session</em></dt>
+			<dd><p>Represents the session to use for the dialog. May be nil, which uses
+the active session if present.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>message</em></dt>
+			<dd><p>The required message for the dialog.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>title</em></dt>
+			<dd><p>An optional title for the dialog.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>parameters</em></dt>
+			<dd><p>A dictionary of additional parameters to be passed to the dialog. May be nil</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>handler</em></dt>
+			<dd><p>An optional handler that will be called when the dialog is dismissed. May be nil.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>friendCache</em></dt>
+			<dd><p>An optional cache object used to enable frictionless sharing for a known set of friends. The
+cache instance should be preserved for the life of the session and reused for multiple calls to the present method.
+As the users set of friends enabled for frictionless sharing changes, this method auto-updates the cache.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Presents a Facebook apprequest dialog.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBWebDialogs.h</code><br />
+	</div>				
+	
+	
+</div>
+						
 					</div>
 					
 					
@@ -393,7 +571,7 @@ the active session if present.</p></dd>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-03-04)</span><br />
+						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-05-03)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

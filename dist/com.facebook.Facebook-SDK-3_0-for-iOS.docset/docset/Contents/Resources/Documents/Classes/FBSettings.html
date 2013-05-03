@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">Facebook SDK 3.2 for iOS </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">Facebook SDK 3.5.1 for iOS </a></h1>
 				<a id="developerHome" href="../index.html">Facebook</a>
 			</div>
 			
@@ -44,6 +44,20 @@
 	
 	<option value="//api/name/clientToken">&nbsp;&nbsp;&nbsp;&nbsp;+ clientToken</option>
 	
+	<option value="//api/name/defaultAppID">&nbsp;&nbsp;&nbsp;&nbsp;+ defaultAppID</option>
+	
+	<option value="//api/name/defaultDisplayName">&nbsp;&nbsp;&nbsp;&nbsp;+ defaultDisplayName</option>
+	
+	<option value="//api/name/defaultUrlSchemeSuffix">&nbsp;&nbsp;&nbsp;&nbsp;+ defaultUrlSchemeSuffix</option>
+	
+	<option value="//api/name/disableBetaFeature:">&nbsp;&nbsp;&nbsp;&nbsp;+ disableBetaFeature:</option>
+	
+	<option value="//api/name/enableBetaFeature:">&nbsp;&nbsp;&nbsp;&nbsp;+ enableBetaFeature:</option>
+	
+	<option value="//api/name/enableBetaFeatures:">&nbsp;&nbsp;&nbsp;&nbsp;+ enableBetaFeatures:</option>
+	
+	<option value="//api/name/isBetaFeatureEnabled:">&nbsp;&nbsp;&nbsp;&nbsp;+ isBetaFeatureEnabled:</option>
+	
 	<option value="//api/name/loggingBehavior">&nbsp;&nbsp;&nbsp;&nbsp;+ loggingBehavior</option>
 	
 	<option value="//api/name/publishInstall:">&nbsp;&nbsp;&nbsp;&nbsp;+ publishInstall:</option>
@@ -51,6 +65,12 @@
 	<option value="//api/name/publishInstall:withHandler:">&nbsp;&nbsp;&nbsp;&nbsp;+ publishInstall:withHandler:</option>
 	
 	<option value="//api/name/setClientToken:">&nbsp;&nbsp;&nbsp;&nbsp;+ setClientToken:</option>
+	
+	<option value="//api/name/setDefaultAppID:">&nbsp;&nbsp;&nbsp;&nbsp;+ setDefaultAppID:</option>
+	
+	<option value="//api/name/setDefaultDisplayName:">&nbsp;&nbsp;&nbsp;&nbsp;+ setDefaultDisplayName:</option>
+	
+	<option value="//api/name/setDefaultUrlSchemeSuffix:">&nbsp;&nbsp;&nbsp;&nbsp;+ setDefaultUrlSchemeSuffix:</option>
 	
 	<option value="//api/name/setLoggingBehavior:">&nbsp;&nbsp;&nbsp;&nbsp;+ setLoggingBehavior:</option>
 	
@@ -88,6 +108,20 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clientToken">clientToken</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultAppID">defaultAppID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultDisplayName">defaultDisplayName</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultUrlSchemeSuffix">defaultUrlSchemeSuffix</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/disableBetaFeature:">disableBetaFeature:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableBetaFeature:">enableBetaFeature:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableBetaFeatures:">enableBetaFeatures:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isBetaFeatureEnabled:">isBetaFeatureEnabled:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loggingBehavior">loggingBehavior</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/publishInstall:">publishInstall:</a></span></li>
@@ -95,6 +129,12 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/publishInstall:withHandler:">publishInstall:withHandler:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setClientToken:">setClientToken:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDefaultAppID:">setDefaultAppID:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDefaultDisplayName:">setDefaultDisplayName:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDefaultUrlSchemeSuffix:">setDefaultUrlSchemeSuffix:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setLoggingBehavior:">setLoggingBehavior:</a></span></li>
 	
@@ -143,7 +183,9 @@
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p>@typedef</p>
 
-<p>Block type used to get install data that is returned by server when publishInstall is called</p>
+<p>A list of beta features that can be enabled for the SDK. Beta features are for evaluation only,
+and are therefore only enabled for DEBUG builds. Beta features should not be enabled
+in release builds.</p>
 					</div>
 					
 					
@@ -225,6 +267,89 @@ have been no user login established.</p></span>
 	</span>
 	
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDefaultDisplayName:">+&nbsp;setDefaultDisplayName:</a></code>
+		<span class="tooltip"><p>Set the default Facebook Display Name to be used by the SDK. This should match
+the Display Name that has been set for the app with the corresponding Facebook App ID, in
+the Facebook App Dashboard</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultDisplayName">+&nbsp;defaultDisplayName</a></code>
+		<span class="tooltip"><p>Get the default Facebook Display Name used by the SDK. If not explicitly
+set, the default will be read from the application&rsquo;s plist.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDefaultAppID:">+&nbsp;setDefaultAppID:</a></code>
+		<span class="tooltip"><p>Set the default Facebook App ID to use for sessions. The SDK allows the appID
+to be overridden per instance in certain cases (e.g. per instance of FBSession)</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultAppID">+&nbsp;defaultAppID</a></code>
+		<span class="tooltip"><p>Get the default Facebook App ID used by the SDK. If not explicitly
+set, the default will be read from the application&rsquo;s plist. The SDK allows the appID
+to be overridden per instance in certain cases (e.g. per instance of FBSession)</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDefaultUrlSchemeSuffix:">+&nbsp;setDefaultUrlSchemeSuffix:</a></code>
+		<span class="tooltip"><p>Set the default url scheme suffix used by the SDK. The SDK allows the url
+scheme suffix to be overridden per instance in certain cases (e.g. per instance of FBSession)</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultUrlSchemeSuffix">+&nbsp;defaultUrlSchemeSuffix</a></code>
+		<span class="tooltip"><p>Get the default url scheme suffix used for sessions.  If not
+explicitly set, the default will be read from the application&rsquo;s plist. The SDK allows the url
+scheme suffix to be overridden per instance in certain cases (e.g. per instance of FBSession)</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/enableBetaFeatures:">+&nbsp;enableBetaFeatures:</a></code>
+		<span class="tooltip"><p>Enables the specified beta features. Beta features are for evaluation only,
+and are therefore only enabled for debug builds. Beta features should not be enabled
+in release builds.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/enableBetaFeature:">+&nbsp;enableBetaFeature:</a></code>
+		<span class="tooltip"><p>Enables a beta feature. Beta features are for evaluation only,
+and are therefore only enabled for debug builds. Beta features should not be enabled
+in release builds.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/disableBetaFeature:">+&nbsp;disableBetaFeature:</a></code>
+		<span class="tooltip"><p>Disables a beta feature.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isBetaFeatureEnabled:">+&nbsp;isBetaFeatureEnabled:</a></code>
+		<span class="tooltip"><p>Determines whether a beta feature is enabled or not.</p></span>
+	</span>
+	
+	
 </li>
 						</ul>
 						
@@ -265,6 +390,356 @@ have been no user login established.</p></span>
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Retrieve the Client Token that has been set via [FBSettings setClientToken]</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSettings.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultAppID" title="defaultAppID"></a>
+	<h3 class="subsubtitle method-title">defaultAppID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the default Facebook App ID used by the SDK. If not explicitly
+set, the default will be read from the application&rsquo;s plist. The SDK allows the appID
+to be overridden per instance in certain cases (e.g. per instance of FBSession)</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)defaultAppID</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Get the default Facebook App ID used by the SDK. If not explicitly
+set, the default will be read from the application&rsquo;s plist. The SDK allows the appID
+to be overridden per instance in certain cases (e.g. per instance of FBSession)</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSettings.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultDisplayName" title="defaultDisplayName"></a>
+	<h3 class="subsubtitle method-title">defaultDisplayName</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the default Facebook Display Name used by the SDK. If not explicitly
+set, the default will be read from the application&rsquo;s plist.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)defaultDisplayName</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Get the default Facebook Display Name used by the SDK. If not explicitly
+set, the default will be read from the application&rsquo;s plist.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSettings.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultUrlSchemeSuffix" title="defaultUrlSchemeSuffix"></a>
+	<h3 class="subsubtitle method-title">defaultUrlSchemeSuffix</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the default url scheme suffix used for sessions.  If not
+explicitly set, the default will be read from the application&rsquo;s plist. The SDK allows the url
+scheme suffix to be overridden per instance in certain cases (e.g. per instance of FBSession)</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)defaultUrlSchemeSuffix</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Get the default url scheme suffix used for sessions.  If not
+explicitly set, the default will be read from the application&rsquo;s plist. The SDK allows the url
+scheme suffix to be overridden per instance in certain cases (e.g. per instance of FBSession)</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSettings.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/disableBetaFeature:" title="disableBetaFeature:"></a>
+	<h3 class="subsubtitle method-title">disableBetaFeature:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Disables a beta feature.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)disableBetaFeature:(FBBetaFeatures)<em>betaFeature</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>betaFeature</em></dt>
+			<dd><p>The beta feature to disable.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Disables a beta feature.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSettings.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/enableBetaFeature:" title="enableBetaFeature:"></a>
+	<h3 class="subsubtitle method-title">enableBetaFeature:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enables a beta feature. Beta features are for evaluation only,
+and are therefore only enabled for debug builds. Beta features should not be enabled
+in release builds.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)enableBetaFeature:(FBBetaFeatures)<em>betaFeature</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>betaFeature</em></dt>
+			<dd><p>The beta feature to enable.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Enables a beta feature. Beta features are for evaluation only,
+and are therefore only enabled for debug builds. Beta features should not be enabled
+in release builds.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSettings.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/enableBetaFeatures:" title="enableBetaFeatures:"></a>
+	<h3 class="subsubtitle method-title">enableBetaFeatures:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enables the specified beta features. Beta features are for evaluation only,
+and are therefore only enabled for debug builds. Beta features should not be enabled
+in release builds.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)enableBetaFeatures:(NSUInteger)<em>betaFeatures</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>betaFeatures</em></dt>
+			<dd><p>The beta features to enable (expects a bitwise OR of FBBetaFeatures)</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Enables the specified beta features. Beta features are for evaluation only,
+and are therefore only enabled for debug builds. Beta features should not be enabled
+in release builds.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSettings.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isBetaFeatureEnabled:" title="isBetaFeatureEnabled:"></a>
+	<h3 class="subsubtitle method-title">isBetaFeatureEnabled:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Determines whether a beta feature is enabled or not.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BOOL)isBetaFeatureEnabled:(FBBetaFeatures)<em>betaFeature</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>betaFeature</em></dt>
+			<dd><p>The beta feature to check.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>YES if the beta feature is enabled, NO if not.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Determines whether a beta feature is enabled or not.</p>
 	</div>
 	
 	
@@ -498,6 +973,167 @@ have been no user login established.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/setDefaultAppID:" title="setDefaultAppID:"></a>
+	<h3 class="subsubtitle method-title">setDefaultAppID:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the default Facebook App ID to use for sessions. The SDK allows the appID
+to be overridden per instance in certain cases (e.g. per instance of FBSession)</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)setDefaultAppID:(NSString *)<em>appID</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>appID</em></dt>
+			<dd><p>The default Facebook App ID to be used by the SDK.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Set the default Facebook App ID to use for sessions. The SDK allows the appID
+to be overridden per instance in certain cases (e.g. per instance of FBSession)</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSettings.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setDefaultDisplayName:" title="setDefaultDisplayName:"></a>
+	<h3 class="subsubtitle method-title">setDefaultDisplayName:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the default Facebook Display Name to be used by the SDK. This should match
+the Display Name that has been set for the app with the corresponding Facebook App ID, in
+the Facebook App Dashboard</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)setDefaultDisplayName:(NSString *)<em>displayName</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>displayName</em></dt>
+			<dd><p>The default Facebook Display Name to be used by the SDK.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Set the default Facebook Display Name to be used by the SDK. This should match
+the Display Name that has been set for the app with the corresponding Facebook App ID, in
+the Facebook App Dashboard</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSettings.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setDefaultUrlSchemeSuffix:" title="setDefaultUrlSchemeSuffix:"></a>
+	<h3 class="subsubtitle method-title">setDefaultUrlSchemeSuffix:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the default url scheme suffix used by the SDK. The SDK allows the url
+scheme suffix to be overridden per instance in certain cases (e.g. per instance of FBSession)</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)setDefaultUrlSchemeSuffix:(NSString *)<em>urlSchemeSuffix</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>urlSchemeSuffix</em></dt>
+			<dd><p>The default url scheme suffix to be used by the SDK.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Set the default url scheme suffix used by the SDK. The SDK allows the url
+scheme suffix to be overridden per instance in certain cases (e.g. per instance of FBSession)</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FBSettings.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/setLoggingBehavior:" title="setLoggingBehavior:"></a>
 	<h3 class="subsubtitle method-title">setLoggingBehavior:</h3>
 	
@@ -660,7 +1296,7 @@ or on first network request to Facebook.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-03-04)</span><br />
+						<p><span class="copyright">&copy; 2013 Facebook. All rights reserved. (Last updated: 2013-05-03)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						
